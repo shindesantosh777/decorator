@@ -1,19 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ChildComponent } from './components/child/child.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [ChildComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-
-  title = 'Santosh';
-  
-  changeName(button:HTMLInputElement){
-  this.title ="Shinde"
-  console.log(button.value)
-
-  }
+ title = 'Decorator'; 
+ parentData: number = 1
 }
