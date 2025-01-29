@@ -1,3 +1,6 @@
 <h1>Input And Output {{title}}</h1>
 pass data parent to child
-<app-child [childData]="parentData" ></app-child>
+<app-child [childData]="parentData" (messageEvent)="onMessageReceived($event)" ></app-child>
+
+
+<p>{{ receivedMessage }}</p>  <!-- Display the received message from child -->

@@ -10,4 +10,10 @@ import { ChildComponent } from './components/child/child.component';
 export class AppComponent {
  title = 'Decorator'; 
  parentData: number = 1
+
+ receivedMessage: string = '';
+
+ onMessageReceived(message: string) {
+   this.receivedMessage = message;  // Handle the message received from child
+ }
 }
